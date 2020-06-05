@@ -3,7 +3,7 @@ import React from "react";
 const Message = (props) => {	
   return(<div className={props.speaks === "me" ? "right-align" : ""}>
       <div className={`chatbubble ${props.speaks === "bot" ? "bot" : "me"}`}>
-        <span>{props.text}</span>
+        <div dangerouslySetInnerHTML={{ __html: props.text}} />
       </div>
   </div>
 )};
